@@ -10,9 +10,9 @@ func cetakGambar(param int) {
 	if param % 2 == 0 {
 		fmt.Println("Parameter harus bilangan ganjil")
 	} else{
-		var penengah = param - ((param - 1) / 2)
+		penengah := param - ((param - 1) / 2)
 		for i := 1; i <= param; i++ {
-			var tampung string = ""
+			tampung := ""
 			for x := 1; x <= param; x++{
 				if i == penengah {
 					tampung += "* "
