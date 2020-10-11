@@ -10,18 +10,15 @@ func cetakGambar(param int) {
 	if param % 2 == 0 {
 		fmt.Println("Parameter harus bilangan ganjil")
 	} else{
-		penengah := param - ((param - 1) / 2)
+		penengah := (param / 2) + 1
+		fmt.Println("--- panjang ---")
 		for i := 1; i <= param; i++ {
 			tampung := ""
 			for x := 1; x <= param; x++{
-				if i == penengah {
+				if x == 1 || x == param ||  i == penengah {
 					tampung += "* "
 				}else{
-					if x == 1 || x == param{
-						tampung += "* "
-					}else{
-						tampung += "= "
-					}
+					tampung += "= "
 				}
 			}
 			fmt.Println(tampung)
@@ -31,8 +28,9 @@ func cetakGambar(param int) {
 }
 
 func main() {
-	cetakGambar(5)
-	cetakGambar(10)
 	cetakGambar(3)
+	cetakGambar(5)
 	cetakGambar(9)
+	cetakGambar(15)
+	cetakGambar(10)
 }
